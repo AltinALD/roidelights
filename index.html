@@ -1,105 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roi Delights — Fli & Bakllava</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawyer Connect</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <img src="logo.png" alt="Roi Delights Logo" class="logo">
-        <span>Roi Delights</span>
-      </a>
-      <button id="cartToggle" class="nav-toggle">Cart <span id="cartCount">0</span></button>
+  <!-- ✅ NAVBAR START -->
+  <nav class="navbar">
+    <div class="logo"> <img src="images/logo.png" alt="LawyerConnect Logo" class="logo-img" />⚖️ LawyerConnect</div>
+    <div class="menu-icon" id="menu-icon">☰</div>
+    <div class="menu" id="menu">
+      <a href="#">My Bookings</a>
+      <a href="#">My Account</a>
+      <a href="case.html">Open a Case</a>
     </div>
+  </nav>
+  <!-- ✅ NAVBAR END -->
+
+  <header class="header">
+    <h1>LawyerConnect</h1>
+    <p>Find trusted lawyers in your area</p>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Fresh Fli & Bakllava — Order Online</h1>
-      <p>Choose your favorites, fill your info, and place your order quickly!</p>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
   <main class="container">
-    <section class="products-grid">
-
-      <article class="product" data-id="fli" data-name="Fli" data-price="8.50">
-        <img src="images/fli.jpg" alt="Traditional Fli" class="product-img">
-        <h3>Traditional Fli</h3>
-        <p>Delicious layered Albanian Fli baked fresh daily.</p>
-        <div class="product-row">
-          <strong class="price">€8.50</strong>
-          <div class="controls">
-            <input type="number" min="1" value="1" class="qty-input">
-            <button class="btn add-cart">Add</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="product" data-id="bakllava" data-name="Bakllava" data-price="1.80">
-        <img src="images/bakllava.jpg" alt="Bakllava" class="product-img">
-        <h3>Bakllava (piece)</h3>
-        <p>Classic Albanian bakllava, sweet and nutty.</p>
-        <div class="product-row">
-          <strong class="price">€1.80</strong>
-          <div class="controls">
-            <input type="number" min="1" value="1" class="qty-input">
-            <button class="btn add-cart">Add</button>
-          </div>
-        </div>
-      </article>
-
-    </section>
-
-    <!-- CART PANEL -->
-    <aside class="cart-panel" id="cartPanel">
-      <div class="cart-header">
-        <h3>Your Order</h3>
-        <button id="closeCart" class="close-btn">&times;</button>
+    <!-- Lawyer Card 1 -->
+    <div class="lawyer-card">
+      <img src="images/lawyer1.jpg" alt="Dr. Anna Müller" class="lawyer-img" />
+      <h2>Dr. Anna Müller</h2>
+      <p class="specialty">Family & Divorce Law</p>
+      <p class="location">Berlin, Germany</p>
+      <div class="actions">
+        <button class="chat-btn">💬 Chat</button>
+        <button class="book-btn">📅 Book</button>
+        <button class="contact-btn">📞 Contact</button>
       </div>
-      <div id="cartItems" class="cart-items">
-        <p class="empty">No items yet!</p>
+    </div>
+
+    <!-- Lawyer Card 2 -->
+    <div class="lawyer-card">
+      <img src="images/lawyer2.jpg" alt="Markus Schneider" class="lawyer-img" />
+      <h2>Markus Schneider</h2>
+      <p class="specialty">Criminal Defense</p>
+      <p class="location">Munich, Germany</p>
+      <div class="actions">
+        <button class="chat-btn">💬 Chat</button>
+        <button class="book-btn">📅 Book</button>
+        <button class="contact-btn">📞 Contact</button>
       </div>
-      <div class="cart-summary">
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <strong id="subtotal">€0.00</strong>
-        </div>
-        <form id="checkoutForm">
-          <label>Full Name
-            <input type="text" id="custName" required placeholder="Your Name">
-          </label>
-          <label>City
-            <input type="text" id="custCity" required placeholder="City">
-          </label>
-          <label>Address
-            <input type="text" id="custAddress" required placeholder="Street + No.">
-          </label>
-          <label>Phone
-            <input type="tel" id="custPhone" required placeholder="+49 176 000 0000">
-          </label>
-          <button type="submit" class="btn primary">Send Order (WhatsApp)</button>
-          <button type="button" id="clearCartBtn" class="btn ghost">Clear</button>
-        </form>
+    </div>
+
+    <!-- Lawyer Card 3 -->
+    <div class="lawyer-card">
+      <img src="images/lawyer3.jpg" alt="Sophie Becker" class="lawyer-img" />
+      <h2>Sophie Becker</h2>
+      <p class="specialty">Corporate & Business Law</p>
+      <p class="location">Hamburg, Germany</p>
+      <div class="actions">
+        <button class="chat-btn">💬 Chat</button>
+        <button class="book-btn">📅 Book</button>
+        <button class="contact-btn">📞 Contact</button>
       </div>
-    </aside>
+    </div>
+
+    <!-- Lawyer Card 4 -->
+    <div class="lawyer-card">
+      <img src="images/lawyer4.jpg" alt="Jonas Fischer" class="lawyer-img" />
+      <h2>Jonas Fischer</h2>
+      <p class="specialty">Immigration Law</p>
+      <p class="location">Frankfurt, Germany</p>
+      <div class="actions">
+        <button class="chat-btn">💬 Chat</button>
+        <button class="book-btn">📅 Book</button>
+        <button class="contact-btn">📞 Contact</button>
+      </div>
+    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Roi Delights</div>
-      <div>€300 demo website offer</div>
-    </div>
+  <footer>
+    <p>© 2025 LawyerConnect. All rights reserved.</p>
   </footer>
-
-<script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Case - LawyerConnect</title>
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">LawyerConnect</div>
+    <div class="menu-icon" id="menu-icon">☰</div>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="account.html">My Account</a>
+      <a href="case.html">Open Case</a>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1>Create a New Case</h1>
+    <p>Fill out the details below to add a case</p>
+  </header>
+
+  <main class="container">
+    <div class="case-form-container">
+      <form id="case-form">
+        <label for="title">Case Title:</label>
+        <input type="text" id="title" placeholder="Enter case title" required />
+
+        <label for="description">Case Description:</label>
+        <textarea id="description" placeholder="Enter case description" required></textarea>
+
+        <label for="lawyer">Assigned Lawyer:</label>
+        <select id="lawyer" required>
+          <option value="">Select a lawyer</option>
+          <option value="Dr. Anna Müller">Dr. Anna Müller</option>
+          <option value="Markus Schneider">Markus Schneider</option>
+          <option value="Sophie Becker">Sophie Becker</option>
+          <option value="Jonas Fischer">Jonas Fischer</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+
+        <label for="status">Status:</label>
+        <select id="status" required>
+          <option value="open">Open</option>
+          <option value="in-progress">In Progress</option>
+          <option value="closed">Closed</option>
+        </select>
+
+        <button type="submit" class="book-btn">Add Case</button>
+      </form>
+
+      <hr />
+
+      <h2>Example Case:</h2>
+      <div class="example-case">
+        <p><strong>Title:</strong> Divorce Settlement</p>
+        <p><strong>Description:</strong> Client requests assistance with dividing assets and child custody.</p>
+        <p><strong>Assigned Lawyer:</strong> Dr. Anna Müller</p>
+        <p><strong>Date:</strong> 2025-11-05</p>
+        <p><strong>Status:</strong> Open</p>
+        <button class="edit-btn">Edit Case</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 LawyerConnect. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // NAVBAR BURGER MENU
+    const menuIcon = document.getElementById("menu-icon");
+    const menu = document.getElementById("menu");
+    menuIcon.addEventListener("click", () => menu.classList.toggle("show"));
+
+    // FORM SUBMISSION
+    const caseForm = document.getElementById("case-form");
+    caseForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Case added successfully!");
+      caseForm.reset();
+    });
+
+    // EDIT EXAMPLE CASE
+    const editBtn = document.querySelector(".edit-btn");
+    editBtn.addEventListener("click", () => {
+      const example = document.querySelector(".example-case");
+      const title = example.querySelector("p:nth-child(1)").innerText.replace("Title: ", "");
+      const description = example.querySelector("p:nth-child(2)").innerText.replace("Description: ", "");
+      const lawyer = example.querySelector("p:nth-child(3)").innerText.replace("Assigned Lawyer: ", "");
+      const date = example.querySelector("p:nth-child(4)").innerText.replace("Date: ", "");
+      const status = example.querySelector("p:nth-child(5)").innerText.replace("Status: ", "");
+
+      document.getElementById("title").value = title;
+      document.getElementById("description").value = description;
+      document.getElementById("lawyer").value = lawyer;
+      document.getElementById("date").value = date;
+      document.getElementById("status").value = status;
+    });
+  </script>
+</body>
+</html>
